@@ -4,6 +4,7 @@ const submitButton = document.getElementById("submit");
 const resultElement = document.getElementById("result");
 const btnPlus = document.getElementById("plus");
 const btnMinus = document.getElementById("minus");
+const btnMultiply = document.getElementById("multiply")
 const btnClear = document.getElementById("clear");
 
 let action = "";
@@ -15,6 +16,11 @@ btnPlus.onclick = function () {
 btnMinus.onclick = function () {
     action = "minus";
 };
+
+btnMultiply.onclick = function () {
+    action = "multiply";
+};
+
 
 function printResult(result) {
   if (result < 0) {
@@ -44,6 +50,8 @@ function computeResult(inp1, inp2, actionSymbol) {
     result = num1 + num2;
   } else if (actionSymbol === "minus") {
     result = num1 - num2;
+  } else if (actionSymbol === "multiply") {
+    result = num1 * num2
   }
   
   printResult(result);
@@ -51,7 +59,7 @@ function computeResult(inp1, inp2, actionSymbol) {
 
 
 submitButton.onclick = function () {
-    if (action === "plus" || action === "minus") {
+    if (action === "plus" || action === "minus" || action === "multiply") {
       computeResult(inputOne, inputTwo, action);
     } else {
       resultElement.innerHTML = "Please select an operation";

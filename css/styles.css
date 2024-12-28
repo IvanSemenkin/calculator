@@ -31,6 +31,12 @@ h1 {
     margin-bottom: 10px;
 }
 
+#multiply {
+    width: 45%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}   
+
 #result-text{
     color: black;
     text-align: center;
