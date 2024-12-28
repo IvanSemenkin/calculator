@@ -54,6 +54,20 @@ h1 {
     gap: 20px;
 }
 
+
+#submit{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#clear{
+    width: 40%;
+    margin-top: 10px;
+}
+
+
+
 @media (max-width: 600px) {
     #plus, #minus {
         width: 90%;
